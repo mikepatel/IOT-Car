@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ECE 306</string>
+    <string name="finish">Finish &#160;&#160;&#160;&#160;&#160;&#160;</string>
+    <string name="iot_bl">Black Line</string>
+    <string name="pwm_L">PWM Left &#160;</string>
+    <string name="pwm_R">PWM Right</string>
+    <string name="ip">IP Address</string>
+    <string name="connect">Connect</string>
+</resources>

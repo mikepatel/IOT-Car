@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.michael.ece306.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linear_ip"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        >
+
+        <EditText
+            android:id="@+id/editText_ip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:inputType="numberDecimal"
+            android:digits="0123456789."
+            android:imeOptions="actionDone"
+            android:ems="10"
+            android:hint="@string/ip"
+            android:textColor="@color/blue"
+            android:layout_marginTop="10dp"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linear_switch"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear_ip"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="160dp"
+        android:layout_marginRight="20dp"
+        >
+
+        <Switch
+            android:id="@+id/switch_iotBL"
+            android:text="@string/iot_bl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scaleY="1.2"
+            />
+
+
+        <!-- <Switch
+             android:id="@+id/switch_finish"
+             android:text="@string/finish"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_weight="1" />-->
+    </LinearLayout>
+
+    <com.example.michael.ece306.VerticalSeekbar
+        android:id="@+id/seekbar_L"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear_switch"
+        android:layout_marginTop="10dp"
+        />
+
+    <com.example.michael.ece306.VerticalSeekbar
+        android:id="@+id/seekbar_R"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/seekbar_L"
+        />
+
+    <ImageButton
+        android:id="@+id/imageButton_down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_down_arrow"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/imageButton_left"
+        android:layout_marginBottom="80dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton_music"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_music_button"
+        android:layout_above="@+id/imageButton_down"
+        android:layout_alignStart="@+id/imageButton_up"
+        />
+
+    <ImageButton
+        android:id="@+id/imageButton_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_left_arrow"
+        android:layout_above="@id/imageButton_down"
+        android:layout_toLeftOf="@id/imageButton_music"
+        />
+
+    <ImageButton
+        android:id="@+id/imageButton_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_right_arrow"
+        android:layout_above="@id/imageButton_down"
+        android:layout_toRightOf="@id/imageButton_music"
+        />
+
+    <ImageButton
+        android:id="@+id/imageButton_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_up_arrow"
+        android:layout_above="@id/imageButton_music"
+        android:layout_centerInParent="true"
+        />
+
+</RelativeLayout>
